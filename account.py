@@ -17,3 +17,15 @@ class Account:
     """
 
     Account.account_list.append(self)
+
+  @classmethod
+  def account_exists(cls, user_name, password):
+      """
+        Method to check if account exists"
+      """
+        
+      for user in cls.account_list:
+            if (user.user_name == user_name and user.password == password):
+                return True
+
+      return False
