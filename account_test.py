@@ -11,7 +11,17 @@ class TestAccount(unittest.TestCase):
         unittest.TestCase: TestCase class that helps in creating test cases
       """
 
-def setUp(self):
-  """
-  setUp method to run before each test case.
-  """
+      def setUp(self):
+        """
+        setUp method to run before each test case.
+        """
+        self.new_account = Account ("Amos", "Kiprotich", "qwerty")
+
+      def test_init(self):
+        """
+        test_init test cases to test if the object is initialized properly.
+        """
+
+        self.assertEqual(self.new_account.account_name,"Amos")
+        self.assertEqual(self.new_account.user_name,"Kiprotich")
+        self.assertEqual(self.new_account.password,"qwerty")
