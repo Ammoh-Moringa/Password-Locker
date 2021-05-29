@@ -25,7 +25,7 @@ class Account:
       """
         
       for user in cls.account_list:
-            if (user.user_name == user_name and user.password == password):
+            if (Account.user_name == user_name and Account.password == password):
                 return True
 
       return False
