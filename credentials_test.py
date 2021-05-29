@@ -53,6 +53,17 @@ class TestCredentials(unittest.TestCase):
             test_credentials.save_credentials()
             self.assertEqual(len(Credentials.credential_list),2)
 
+  def test_delete_credentials(self):
+            '''
+            test_delete_account to test if we can remove an account from our account list
+            '''
+            self.new_credentials.save_credentials()
+            test_credentials = Credentials("youtube","Amos","Ammoh96") # account
+            test_credentials.save_credentials()
+
+            self.new_credentials.delete_credentials()# Deleting an account object
+            self.assertEqual(len(Credentials.credential_list),1) 
+
 
 
 if __name__ == '__main__':
