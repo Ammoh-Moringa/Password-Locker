@@ -30,6 +30,26 @@ def create_contact(account,username,password):
     return new_credentials
 
 
+def save_credentials(credentials):
+    '''
+    Function to save credentials
+    '''
+    credentials.save_credentials()
+
+
+def delete_credential(credentials):
+    '''
+    Function to delete a credentials
+    '''
+    credentials.delete_credentials()
+
+def find_credentials(username):
+    '''
+    Function that finds an account by username and returns the credentials
+    '''
+    return Credentials.find_by_username(username)
+
+
 
 def main():
     print("Hello there, please enter your account name, user name and password:")  
