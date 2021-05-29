@@ -31,6 +31,34 @@ def main():
     print("Password:")
     password = input()
 
+    print("Confirm password ....")
+    confirm_password = input()
+
+    while confirm_password != password:
+                print("Password did not match...")
+                print("password ....")
+                password = input()
+                print("Confirm  your password ....")
+                confirm_password = input()
+    else:
+                save_accounts(create_account(account_name,user_name, password))
+                print(f'Congratulations, New Account has been created for: {user_name} using password: ({password}).....keep it last past-pass always')
+                print("proceed to login")
+                print("username")
+                entered_user_name = input()
+                print("Your password:")
+                entered_password = input()
+
+    while entered_user_name != user_name or entered_password != password:
+                print("Invalid username or password")
+                print('username')
+                entered_user_name = input()
+                print("Your password")
+                entered_password = input()
+    else:                
+        
+                print(f'Welcome back  {entered_user_name} 😍. please choose an option to continue')
+
 
 if __name__ == '__main__':
     main()    
