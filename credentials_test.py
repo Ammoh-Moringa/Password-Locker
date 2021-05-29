@@ -96,6 +96,16 @@ class TestCredentials(unittest.TestCase):
 
         self.assertEqual(Credentials.display_credentials(),Credentials.credential_list)
 
+  # def test_copy_credentials(self):
+  #       '''
+  #       Test to confirm that we are copying the password from the credential
+  #       '''
+
+  #       self.new_credentials.save_credentials()
+  #       Credentials.copy_password("Ammoh76")
+
+  #       self.assertEqual(self.new_credentials.password,pyperclip.paste())
+
 
 
 if __name__ == '__main__':

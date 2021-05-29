@@ -1,4 +1,5 @@
 #!/usr/bin/env python3.8
+from credentials import Credentials
 from account import Account
 
 def create_account(account_name, user_name,password):
@@ -20,6 +21,14 @@ def check_account_exists(user_name, password):
     Function that check if a account exists with that password and a username and return a Boolean
     '''
     return Account.account_exists(user_name,password)
+
+def create_contact(account,username,password):
+    '''
+    Function to create new credentials
+    '''
+    new_credentials = Credentials(account,username,password)
+    return new_credentials
+
 
 
 def main():

@@ -38,3 +38,8 @@ class Credentials :
         method that returns the credential list
         '''
         return cls.credential_list
+
+  # @classmethod
+  # def copy_password(cls,username):
+  #     credential_found = Credentials.find_by_username(username)
+  #     pyperclip.copy(credential_found.password)
