@@ -64,6 +64,38 @@ class TestCredentials(unittest.TestCase):
             self.new_credentials.delete_credentials()# Deleting an account object
             self.assertEqual(len(Credentials.credential_list),1) 
 
+  def test_find_credentials_by_username_name(self):
+        '''
+        test to check if we can find an account by username and display information
+        '''
+
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("youtube","Amos","Ammoh96") # new account
+        test_credentials.save_credentials()
+
+        found_credentials = Credentials.find_by_username("Amos")
+
+        self.assertEqual(found_credentials.password,test_credentials.password)  
+
+
+  def test_delete_credentials(self):
+            '''
+            test_delete_account to test if we can remove an account from our account list
+            '''
+            self.new_credentials.save_credentials()
+            test_credentials = Credentials("Test","user","0712345678") # account
+            test_credentials.save_credentials()
+
+            self.new_credentials.delete_credentials()# Deleting an account object
+            self.assertEqual(len(Credentials.credential_list),1) 
+  
+  def test_display_all_credentials(self):
+        '''
+        method that returns a list of all credetianls saved
+        '''
+
+        self.assertEqual(Credentials.display_credentials(),Credentials.credential_list)
+
 
 
 if __name__ == '__main__':

@@ -24,3 +24,17 @@ class Credentials :
         '''
 
         Credentials.credential_list.remove(self)
+
+  @classmethod
+  def find_by_username(cls,username):
+        for credentials in cls.credential_list:
+            if credentials.username == username:
+                return credentials  
+
+
+  @classmethod
+  def display_credentials(cls):
+        '''
+        method that returns the credential list
+        '''
+        return cls.credential_list
