@@ -31,7 +31,7 @@ class TestAccount(unittest.TestCase):
         test_save_account test cases to test if the account object is saved into the account list.
         """
 
-        self.new_account.save_account()
+        self.new_account.save_accounts()
         self.assertEqual(len(Account.account_list),1)
 
       def test_user_exists(self):

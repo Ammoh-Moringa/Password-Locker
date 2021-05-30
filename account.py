@@ -11,7 +11,7 @@ class Account:
     self.user_name = user_name
     self.password = password
 
-  def save_account(self):
+  def save_accounts(self):
     """
     Method to save account objects into account account_list.
     """

@@ -52,6 +52,18 @@ class TestCredentials(unittest.TestCase):
             test_credentials = Credentials("youtube","Amos","Ammoh96") # new credentials
             test_credentials.save_credentials()
             self.assertEqual(len(Credentials.credential_list),2)
+  def test_exists_credentials(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the credentials.
+        '''
+
+        self.new_credential.save_credential()
+        test_credentials = Credentials("Twitter","Ammoh", "Ammoh76") # new contact
+        test_credentials.save_credentials()
+
+        credentials_exists = Credentials.credentials_exist("Ammoh")
+
+        self.assertTrue(credentials_exists)   
 
   def test_delete_credentials(self):
             '''
@@ -96,16 +108,7 @@ class TestCredentials(unittest.TestCase):
 
         self.assertEqual(Credentials.display_credentials(),Credentials.credential_list)
 
-  # def test_copy_credentials(self):
-  #       '''
-  #       Test to confirm that we are copying the password from the credential
-  #       '''
-
-  #       self.new_credentials.save_credentials()
-  #       Credentials.copy_password("Ammoh76")
-
-  #       self.assertEqual(self.new_credentials.password,pyperclip.paste())
-
+ 
 
 
 if __name__ == '__main__':

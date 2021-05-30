@@ -17,6 +17,17 @@ class Credentials :
 
     Credentials.credential_list.append(self)
 
+  @classmethod
+  def credentials_exist(cls, username):
+        '''
+        method that checks if a credential exists
+        '''
+        for credentials in cls.credential_list:
+            if credentials.username == username:
+                return True
+
+        return False
+
   def delete_credentials(self):
 
         '''
@@ -39,7 +50,4 @@ class Credentials :
         '''
         return cls.credential_list
 
-  # @classmethod
-  # def copy_password(cls,username):
-  #     credential_found = Credentials.find_by_username(username)
-  #     pyperclip.copy(credential_found.password)
+ 
