@@ -26,7 +26,7 @@ To access this project on your local files, you can clone it using these steps
 
 ## Running the application
 In your terminal:
- 1. $ cd Password_Locker
+ 1. $ cd Password-Locker
  2. $ chmod +x run.py
  3. $ ./run.py
 
@@ -47,4 +47,4 @@ In your terminal:
 
 ## Technologies used
 
-python3.8
+1. python3.8
