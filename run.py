@@ -2,8 +2,8 @@
 from credentials import Credentials
 from account import Account
 from generate import *
-# Accont
 
+       #Account
 
 def create_account(account_name, user_name, password):
     '''
@@ -26,7 +26,7 @@ def check_account_exists(user_name, password):
     '''
     return Account.account_exists(user_name, password)
 
-
+            #Credentials
 def create_credentials(account, username, password):
     '''
     Function to create new credentials
@@ -68,7 +68,7 @@ def display_credentials():
     '''
     return Credentials.display_credentials()
 
-
+            #Main
 
 def main():
     print("Hello there, welcome to Password-lockcer, your passwords are safe with us, you can also create your own and store it here.")
