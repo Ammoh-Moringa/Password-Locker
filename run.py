@@ -92,8 +92,8 @@ def main():
                 password = createdPass
 
                 print(f'''
-                New password ({str(len(createdPass))}):
-                below...
+                Your generated password ({str(len(createdPass))}):
+                is as shown below...
 
                 {createdPass}
                 ''')
@@ -105,16 +105,16 @@ def main():
                 confirm_password = input()
 
                 while confirm_password != password:
-                    print("Password did not match")
-                    print("password ....")
+                    print(" Oppss!!! Password did not match")
+                    print("Enter the right password ....")
                     password = input()
-                    print("Confirm password ....")
+                    print("Confirm your password ....")
                     confirm_password = input()
 
                 else:
                     save_accounts(create_account(username,password,password))
                     print(
-                        f'Congratulations 🎉, New Account has been created for: {username} using password: {password}')
+                        f'Congratulations 🎉, Succefully created a new a count for: {username} using this password: {password}')
                     print("Proceed to login")
                     print("username")
                     entered_username = input()
@@ -140,12 +140,12 @@ def main():
             else:
 
                 print(
-                    f'Welcome back  {entered_username} 😍. please choose an option to continue')
+                    f'Welcome back to password locker  {entered_username} 😍. Please choose an option to continue')
 
                 while True:
                     print('\n ………')
                     print(
-                        'Use these short codes to navigate through credentials : ac - add credential, lc - list credentials, dl - delete credential, ex - exit')
+                        'Please use  these short codes to navigate through credentials : ac - add credential, lc - list credentials, dl - delete credential, ex - exit')
                     print('………')
 
                     shortCode = input().lower()
@@ -162,7 +162,7 @@ def main():
                         print('…')
 
                         passResponse = input(
-                            'Do you want a generated password? \n  Respond with \'y\' for yes or \'n\' for no: ').lower()
+                            'Hello, do you neeed a generated password? \n  Respond with \'y\' for yes or \'n\' for no: ').lower()
 
                         if passResponse == 'y':
                             createdPass = passwordGenerator(getPassLength())
@@ -172,8 +172,8 @@ def main():
                                 credAccount, credUserName, createdPass))
                             print(
                                 f'''
-                                                New password ({str(len(createdPass))}):  
-                                                below
+                                                New password successfully generated ({str(len(createdPass))}):  
+                                                as shown below
                                                 {createdPass}
                                                 ''')
                         else:
@@ -196,12 +196,12 @@ def main():
                                 save_credentials(create_credentials(
                                     credAccount, credUserName, credPass))
                                 print(
-                                    f'Congratulations your credentials for {credAccount} was successfully created!')
+                                    f'Your credentials for {credAccount} was successfully created!')
                                 print('\n')
 
                     elif shortCode == 'lc':
                         if display_credentials():
-                            print('Here is a list of all your contacts')
+                            print('Here is a list of all your Accounts with there credentials.')
                             print('\n')
                             for credential in display_credentials():
                                 print(
@@ -210,7 +210,7 @@ def main():
                             print('\n')
                         else:
                             print('\n')
-                            print("You dont seem to have any contacts saved yet")
+                            print("Sorry, you dont seem to have any credentials saved yet")
                             print('\n')
 
                     elif shortCode == "dl":
@@ -227,7 +227,7 @@ def main():
 
 
                     elif shortCode == "ex": 
-                                        print('Confirm by navigating to exit again!!!')
+                                        print('Confirm that you want to exit password locker by navigating to exit again!!!')
                                         break
 
                     elif shortCode == 'ex':
@@ -237,7 +237,7 @@ def main():
                      print('Invalid credentials short code')
 
         elif shortCode == 'ex':
-            print('Thank you!')
+            print('Thank you, and welcome again, have a great day!')
             break
 if __name__ == '__main__':
     main()
