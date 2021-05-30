@@ -214,7 +214,7 @@ def main():
                             print('\n')
 
                     elif shortCode == "dl":
-                                        print("Enter account name you would like to delete")
+                                        print("Please Enter the Username of the account you want to delete")
                                         username = input()
                                         if  check_existing_credentials(username):
                                             print("Please wait ...")
