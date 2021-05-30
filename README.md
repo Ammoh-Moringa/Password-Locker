@@ -38,6 +38,7 @@ In your terminal:
 2. lg - Log into your account.
 3. ex - Exit from password locker.
 
+    Create new credentials:
 1. ac - Add  new credentials.
 2. lc - List all credentials.
 3. dl - Delete credentials.
