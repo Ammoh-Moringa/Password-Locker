@@ -71,11 +71,11 @@ def display_credentials():
 
 
 def main():
-    print("Hello, Welcome to FUTURE SAVER!. Create an account to save your passwords.")
+    print("Hello there, welcome to Password-lockcer, your passwords are safe with us, you can also create your own and store it here.")
     while True:
         print('\n')
         print('-'*10)
-        print('Use these short codes to navigate : cu - create a new user, lg - login to your account, ex -exit the password locker')
+        print('Use these short codes carefully, to navigate : cu - Create a new account, lg - login to your account, ex -exit the password locker')
         print('-'*10)
 
         shortCode = input().lower()
